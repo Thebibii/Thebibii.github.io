@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins;
+    overflow-x: hidden;
+    /*height: 2000px;*/
+}
+
+main {
+    /*background-color: rgb(122,107,174);*/
+    /*padding: 20px;*/
+
+}
+
+img {
+    margin: auto;
+    display: flex;
+}
+
+div {
+    /*display: block;*/
+}
+
+nav {
+    /*height: 20px;*/
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-around;
+    background-color: rgb(122,107,174);
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 40%;
+    /*transition: all 2s;*/
+}
+
+nav .logo {
+    font-size: 1.5rem;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hamburger Menu */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 15px;
+    justify-content: space-between;
+    position: relative;
+    top: 6px;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 20px;
+    height: 28px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 99;
+    top: -5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+    transform-origin: 0 100;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(4px, -3px);
+}
+
+.menu-toggle input:checked ~ span:last-child {
+    background-color: white;
+    transform: rotate(-45deg) translate(4px, -3px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.header {
+    display: flex;
+    height: 700px;
+    /*background: red;*/
+
+}
+
+.bagian1 {
+    /*padding: 40px;*/
+    display: flex;
+    padding: 1em;
+    /*background-color: #aaa;*/
+    text-align: center;
+    /*height: 800px;*/
+    /*align-items: center;*/
+    align-items: center;
+}
+
+
+.bagian1 .hero {
+    /*width: 100%;*/
+    /*margin-top: 70px;*/
+    /*text-align: center;*/
+    /*align-items: center;*/
+}
+
+.bagian1 img {
+    width: 30%;
+    /*text-align: center;*/
+    /*display: flex;*/
+    /*float: right;*/
+    
+}
+
+.bagian1 .hero .desc {
+    /*justify-content: center;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    padding-top: 50px;
+}
+
+.bagian1 .title {
+    font-size: 2.5rem;
+}
+
+.bagian1 .desc {
+    justify-content: center;
+    display: flex;
+}
+
+.bagian2 {
+    display: flex;
+    padding: 40px;
+    /*background-color: #eaeaea;*/
+    /*height: 500px;*/
+    /*width: 100%;*/
+    align-items: center;
+    text-align: center;
+}
+
+.bagian2 .about {
+    /*text-align: center;*/
+    align-items: center;
+    display: flex;
+}
+
+.bagian2 img {
+    width: 100px;
+    height: 100px;
+}
+
+.icon {
+    display: flex;
+    margin: 20%;
+    justify-content: center;
+}
+
+.icon a {
+    color: #7869ab;
+    margin: 0 5px;
+    font-size: 1.3rem;
+}
+
+.skill {
+        /*height: 500px;*/
+        /*background-color: purple;*/
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+        flex-direction: column;
+        text-align: center;
+        /*overflow: hidden;*/
+    }
+
+    .skill .bagian3 {
+        /*padding: 40px;*/
+        justify-content: center;
+        border: 1px solid #aaa;
+        height: 150px;
+        width: 300px;
+        border-radius: 10px 0 10px 0;
+        overflow: hidden;
+        justify-content: center;
+        margin: 10px 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .skill .bagian3 .border {
+        background-color: #fafdf6;
+        height: 150px;
+        /*box-shadow: 0 4px 8px 0 grey;*/
+        
+
+    }
+
+    .skill h2 {
+
+        /*position: relative;*/
+        /*text-align: center;*/
+        /*padding-top: -500px;*/
+
+    }
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    font-size: 0.5rem;
+}
+
+/* Responsive Breakpoint*/
+/* Ukuran Tablet */
+@media screen and (max-width: 726px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 567px) {
+
+    nav {
+        position: fixed;
+    }
+
+    nav .logo {
+        padding-right: 150px;
+        z-index: 2;
+
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        background-color: rgb(122,107,174);
+        align-items: center;
+        justify-content: space-evenly;
+        height: 70vh;
+        width: 100%;
+        z-index: 1;
+        transform: translate(0);
+        padding-top: 10px;
+        opacity: 1;
+        /*transition: all 0.2s;*/
+        overflow: hidden;
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 99;
+    }
+
+    nav ul.slide {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+
+    .bagian1 {
+        padding: 40px;
+    /*display: flex;*/
+    /*height: 800px;*/
+    align-items: center;
+    }
+
+    .bagian1 .hero {
+        /*align-items: center;*/
+        margin-top: 70px;
+    }
+
+    .header .bagian1 .desc {
+        padding-top: 100px;
+    }
+
+    .header .bagian1 .hero img {
+        width: 70%;
+        height: 150px;
+    }
+
+    .header .bagian1 .hero .title {
+        padding-top: 50px;
+        font-size: 2rem;
+    }
+
+    .main {
+        /*background-color: blue;*/
+    }
+
+    .bagian2 {
+        padding: 40px;
+        align-items: center;
+        text-align: center;
+         display: flex;
+    /*padding: 40px;*/
+    /*background-color: #eaeaea;*/
+    /*height: 500px;*/
+    /*width: 100%;*/
+    justify-content: center;
+
+    }
+
+    .bagian2 .desc {
+        justify-content: center;
+    }
+
+    .bagian2 img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .skill {
+        /*height: 500px;*/
+        /*background-color: purple;*/
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+        flex-direction: column;
+        text-align: center;
+        /*overflow: hidden;*/
+        background-image: url('img/background-2.png');
+    }
+
+    .skill .bagian3 {
+        /*padding: 40px;*/
+        /*justify-content: center;*/
+        border: 1px solid #aaa;
+        height: 150px;
+        width: 100%;
+        border-radius: 10px 0 10px 0;
+        overflow: hidden;
+        justify-content: center;
+        margin: 10px 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .skill .border {
+        background-color: #fafdf6;
+        height: 150px;
+        box-shadow: 0 4px 8px 0 grey;
+    }
+
+
+}
